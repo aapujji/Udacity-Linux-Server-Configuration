@@ -5,6 +5,8 @@
 IP Address: 18.188.114.75
 Port: 2200
 
+URL: http://ec2-18.188-114-75.us-east-2a.compute.amazonaws.com
+
 ## Setup
 
 1. Update currently installed packages:
