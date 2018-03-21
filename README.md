@@ -77,4 +77,4 @@ Install Apache: ```sudo apt-get install apache2```
 Install mod_wsgi: ```sudo apt-get install libapache2-mod-wsgi python-dev```
 Enable mod_wsgi: ```sudo a2enmod wsgi```
 
-10. Clone GitHub repository ['https://github.com/aapujji/Udacity-Full-Stack-Nanodegree---Item-Catalog.git'](here)
+10. Clone GitHub repository [here](https://github.com/aapujji/Udacity-Full-Stack-Nanodegree---Item-Catalog.gi)
