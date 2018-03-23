@@ -10,7 +10,7 @@ URL: http://ec2-18.188-114-75.us-east-2a.compute.amazonaws.com
 ## Server Setup
 
 
-### Update currently installed packages:
+### Step 1: Update currently installed packages:
 
 ```
 sudo apt-get update
@@ -18,7 +18,7 @@ sudo apt-get upgrade
 ```
 
 
-### Create user grader
+### Step 2: Create user grader
 
 ```
 sudo adduser grader
@@ -27,7 +27,7 @@ sudo adduser grader
 Give user 'grader' a password and finish creating the user.
 
 
-### Give grader permission to sudo:
+### Step 3: Give grader permission to sudo:
 
 ```
 sudo visudo
@@ -36,7 +36,7 @@ sudo visudo
 Copy the line: ```root  ALL=(ALL:ALL) ALL``` onto a new line and replace root with grader.
 
 
-### Create SSH key pair for grader:
+### Step 4: Create SSH key pair for grader:
 
 #### On your lcoal machine terminal window: 
 ```ssh-keygen```
@@ -68,7 +68,7 @@ sudo su - ubuntu
 ```
 
 
-### Force Key Based Authorization:
+### Step 5: Force Key Based Authorization:
 
 ```
 sudo nano /etc/ssh/sshd_config
@@ -77,7 +77,7 @@ sudo nano /etc/ssh/sshd_config
 Change the line "PasswordAuthentication yes" to "PasswordAuthentication no".
 
 
-### Configure local time to UTC
+### Step 6: Configure local time to UTC
 
 ```
 cat /etc/timezone
@@ -91,7 +91,7 @@ sudo dpkg-reconfigure tzdata
 Choose None of the above and then choose UTC.
 
 
-### Install and Configure Apache:
+### Step 7: Install and Configure Apache:
 
 Install Apache and mod_wsgi: 
 ```
@@ -105,7 +105,7 @@ sudo a2enmod wsgi
 ```
 
 
-### Download Item Catalog Project
+### Step 8: Download Item Catalog Project
 Install git: 
 ```
 sudo apt-get install git
@@ -129,7 +129,7 @@ sudo mv /var/www/catalog/catalog/itemcatalog.py /var/www/catalog/catalog/__init_
 ```
 
 
-### Install Flask and other dependencies
+### Step 9: Install Flask and other dependencies
 ```
 sudo apt-get install python-pip
 sudo pip install virtualenv
@@ -139,7 +139,7 @@ sudo pip install sqlalchemy psycopg2 requests oauth2client httplib2
 ```
 
 
-### Configure and Enable Virtual Host:
+### Step 10: Configure and Enable Virtual Host:
 ```
 sudo nano \etc\apache2\sites-available\catalog.conf
 ```
@@ -172,7 +172,7 @@ sudo a2ensite catalog
 ```
 
 
-### Create the .wsgi File
+### Step 11: Create the .wsgi File
 ```
 cd /var/www/catalog
 sudo nano catalog.wsgi
@@ -191,13 +191,13 @@ application.secret_key = 'super_secret_key'
 ```
 
 
-### Restart Apache
+### Step 12: Restart Apache
 ```
 sudo service apache2 restart
 ```
 
 
-### Install PostgreSQL and create database:
+### Step 13: Install PostgreSQL and create database:
 ```
 sudo apt-get install postgresql
 ```
@@ -229,7 +229,7 @@ exit
 ```
 
 
-### Update Project Files
+### Step 14: Update Project Files
 Update database_setup.py, populatedb.py, and __init__.py with the new engine connection:
 ```
 engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
@@ -248,7 +248,7 @@ CLIENT_ID = json.loads(
 ```
 
 
-### Change port from 22 to 2200:
+### Step 15: Change port from 22 to 2200:
 
 ```
 sudo nano /etc/ssh/sshd_config
@@ -263,7 +263,7 @@ Restart SSH service:
 sudo service ssh restart
 ```
 
-16. Confugre the UFW:
+### Step 16: Confugre the UFW:
 
 ```
 sudo ufw default deny incoming
