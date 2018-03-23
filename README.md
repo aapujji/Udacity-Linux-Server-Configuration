@@ -50,9 +50,10 @@ Then open the newly created pub file: ```cat .ssh/your-file-name.pub```
 
 Copy the contents of the file.
 
-#### On your server signed in as grader: 
+#### On your server: 
 
 ```
+sudo su - grader
 mkdir .ssh
 touch .ssh/authorized_keys
 nano .ssh/authorized_keys
@@ -63,6 +64,7 @@ Paste the contents of the .pub file and save.
 ```
 chmod 700 .ssh
 chmod 644 .ssh/authorized_keys
+sudo su - ubuntu
 ```
 
 
