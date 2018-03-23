@@ -38,7 +38,8 @@ Copy the line: ```root  ALL=(ALL:ALL) ALL``` onto a new line and replace root wi
 
 ### Create SSH key pair for grader:
 
-On your lcoal machine terminal window: ```ssh-keygen```
+#### On your lcoal machine terminal window: 
+```ssh-keygen```
 
 Enter the path for the file: ```"C:/Users/YOUR-USER-NAME/.ssh/app-server"```
 Note: THe path to the file must be this path, but you can name the file anything you want. You don't have to name it app-server.
@@ -49,7 +50,7 @@ Then open the newly created pub file: ```cat .ssh/your-file-name.pub```
 
 Copy the contents of the file.
 
-On your server signed in as grader: 
+#### On your server signed in as grader: 
 
 ```
 mkdir .ssh
