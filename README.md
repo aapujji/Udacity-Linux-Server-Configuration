@@ -63,6 +63,8 @@ Create the project directory:
 ```mkdir catalog```
 ```cd catalog```
 ```sudo git clone https://github.com/aapujji/Udacity-Full-Stack-Nanodegree---Item-Catalog.git```
+Rename the folder that you cloned:
+```sudo mv ./Udacity-Full-Stack-Nanodegree---Item-Catalog ./catalog```
 Rename the application file: ```sudo mv /var/www/catalog/Udacity-Full-Stack-Nanodegree---Item-Catalog/itemcatalog.py /var/www/catalog/Udacity-Full-Stack-Nanodegree---Item-Catalog/__init__.py```
 
 9. Install Flask and other dependencies
