@@ -287,4 +287,4 @@ Check status of UFW by typing ```sudo ufw status```. ALl the ports should show.
 
 ## Contact
 
-For questions, comments or suggestions please send them to aapujji@yahoo.com
+For questions, comments or suggestions please send them to aapujji@yahoo.com.
