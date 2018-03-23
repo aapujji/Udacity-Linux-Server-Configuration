@@ -11,18 +11,24 @@ URL: http://ec2-18.188-114-75.us-east-2a.compute.amazonaws.com
 
 1. Update currently installed packages:
 
-```sudo apt-get update```
-```sudo apt-get upgrade```
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 2. Create user grader
 
-```sudo adduser grader```
+```
+sudo adduser grader
+```
 
 Give user grader a password and finish creating the user.
 
 3. Give grader permission to sudo:
 
-```sudo visudo```
+```
+sudo visudo
+```
 
 Copy the line: ```root  ALL=(ALL:ALL) ALL``` onto a new line and replace root with grader.
 
