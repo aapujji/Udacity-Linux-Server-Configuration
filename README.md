@@ -1,6 +1,8 @@
-# Udacity-Linux-Server-Configuration
+# Udacity Linux Server Configuration version 1.0 03/23/18
 
 ## Description
+
+A Linux Server built using Amazon Lightsail to host a database and web application. To recreate this, refer to the 'Server Setup' section of this readme.
 
 IP Address: 18.188.114.75
 Port: 2200
@@ -282,3 +284,7 @@ Check status of UFW by typing ```sudo ufw status```. ALl the ports should show.
 1. [How To Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
 
 2. [Harushimo](https://github.com/harushimo/linux-server-configuration)
+
+## Contact
+
+For questions, comments or suggestions please send them to aapujji@yahoo.com
